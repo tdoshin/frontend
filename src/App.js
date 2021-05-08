@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import "./App.css";
 
 // IMPORT COMPONENTS
@@ -15,21 +14,25 @@ function App() {
   const URL = "https://timiportfolio.herokuapp.com/";
 
   return (
-    <div className="App">
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/projects">
-          <Projects URL={URL} />
-        </Route>
-        <Route path="/about">
-          <About URL={URL} />
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
+    <nav className= "navbar">
+      <div className= "max-width">
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/projects">
+              <Projects URL={URL} />
+            </Route>
+            <Route path="/about">
+              <About URL={URL} />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </div>
+    </nav>
   );
 }
 
